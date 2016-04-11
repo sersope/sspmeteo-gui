@@ -224,11 +224,11 @@ class MainWindow(object):
 
 intervalo_muestreo = 5 * 60
 duracion = 24 * 60 * 60
-#~ err_conexion = False
-err_conexion = True
-#~ conexion = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+err_conexion = False
+#~ err_conexion = True
+conexion = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 print('Conectando...')
-#~ conexion.connect(('192.168.1.20', 5556))
+conexion.connect(('192.168.1.20', 5556))
 print('Conectado.')
 MainWindow().run()
-#~ conexion.close()
+conexion.close()
